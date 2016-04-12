@@ -33,24 +33,24 @@ You're making a Reddit clone. You need to keep track of subreddits, text posts, 
 
 ## Subreddits Model
 name - string - name of the subreddit
-subreddit_id - number - id of the subreddit this subreddit belongs to.  top subreddits will not have this
+subreddit_name - number - name of the subreddit this subreddit belongs to.  top subreddits will not have this
 
 ## Post Model
-id
+id - number - unique id
 user_id - number - id of the user that made the post
-title
-content
-link_post - boolean -
+title - string - title of the post
+content - string - the content of the post
+link_post - boolean - whether or not the post is just a link
 
 ## Comments Model
-id
-post_id
+id - number - unique id
+post_id - number - id of the post that the comment is related
 user_id - number - id of the user that made the comment
-comment
+comment - string - the content of the commet.
 
 ## Karma Model
 parent_id - number - id of the post related to the karma
 parent_type - string - type of post that the Karma received (post or comment)
 user_id - number - id of the user that the karma belongs to
-positive - number
-negative - number
+positive - number - amount of positive karma
+negative - number - amount of negative karma
